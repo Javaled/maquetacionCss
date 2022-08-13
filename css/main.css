@@ -3,11 +3,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    position: fixed;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    top:0px;
+
 }
 
 html {
@@ -16,12 +12,28 @@ html {
 
 :root {
     --pr-color: #47cfac;
+    --bg-color: #e6e9ed;
+    --bg-color2: #22272d;
+    --uline-color: #cdd2da;
 }
 
 a {
     text-decoration: none;
     display: inline;
     color: black;
+}
+
+.home-body {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top:0px;
+}
+
+.grid-container {
+    max-width: 980px;
+    margin: auto;
 }
 
 header {
@@ -85,6 +97,7 @@ nav .profile-link {
 nav .profile-link a {
     color: black;
     border-bottom: 1px solid;
+    font-size: 1.4rem;
 }
 
 .home-main {
@@ -182,4 +195,258 @@ nav .profile-link a {
 .home-main-button a {
     font-weight: 700;
     font-size: 1.8rem;
+}
+
+.blogs-main {
+    display: grid;
+}
+
+.blogs-news-container {
+    background-color: var(--bg-color);
+    padding: 0 50px 40px;
+}
+
+.blogs-main-new {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+
+.blogs-news-img-container {
+    grid-column: 1;
+}
+
+.blogs-news-img-container img {
+    width:85%;
+}
+
+.blogs-news-info-container {
+    grid-column: 2;
+}
+
+.blogs-news-info-container h2 {
+    font-size: 1.8rem;
+}
+
+.blogs-news-info-container p {
+    grid-column: 2;
+    margin-bottom: 35px;
+    font-size: 1.4rem;
+}
+
+.blogs-posts-container {
+    padding: 0 50px 40px;
+}
+
+.blogs-posts-container h3 {
+    border-bottom: 1px solid var(--uline-color);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.blogs-button {
+    border: 1px solid var(--pr-color);
+    padding: 10px 15px;
+    font-size: 1.2rem;
+}
+
+.blogs-button:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: var(--pr-color);
+}
+
+.blogs-posts-container .post-container {
+    display: inline-block;
+    padding-left: 10px;
+    max-width: 30%;
+    margin-bottom: 50px;
+
+}
+
+.blogs-posts-container h3 {
+    font-size: 1.6rem;
+}
+
+.blogs-posts-container .post-container p {
+    margin-bottom: 35px;
+    font-size: 1.2rem;
+}
+
+.blogs-posts-container .post-container img {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background-color: var(--bg-color2);
+    border-top: 35px solid var(--pr-color);
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin: 30px;
+    font-size: 1.2rem;
+}
+
+.blogpost-img-container {
+    padding: 0 50px 40px;
+}
+
+.blogpost-img-container img {
+    width: 100%;
+}
+
+.blogpost-main-container {
+    padding: 0 50px 40px;
+}
+
+.blogpost-main-container h1 {
+    border-bottom: 1px solid var(--uline-color);
+    padding-bottom: 20px;
+}
+
+.blogpost-main-container article h2 {
+    font-size: 3.5rem;
+}
+
+/* .contact-main-container {
+    height: 15vh;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px,320px));
+    align-content: flex-start;
+    justify-content: center;
+    background-color: var(--bg-color);
+}
+
+.contact-main-container .contact-right {
+    grid-column: 3;
+}
+
+.contact-main-container > div {
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: flex-end;
+    margin-top: 20px;
+}
+
+.contact-main-container div img{
+    width: auto;
+    height: 50px;
+}
+
+
+.contact-main-container > div div a {
+    display: block;
+    margin: 0 5px 5px;
+    text-decoration: underline;
+}
+
+.contact-main-container > div div p {
+    margin: 0 5px;
+} */
+
+.contact-main-container {
+    width: 100%;
+    min-height: 250px;
+    background-color: var(--bg-color);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.contact-main-container div {
+    display: inline-block;
+    width: 30%;
+    /* height: 100%; */
+
+}
+
+.contact-main-container div a {
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+.contact-main-container .contact-left, .contact-main-container .contact-right {
+    text-align: initial;
+    margin-top: 85px;
+}
+
+.contact-main-container .contact-left div, .contact-main-container .contact-right div {
+    width: 200px;
+} 
+
+.contact-main-container img {
+    width: 100px;
+}
+
+/* .contact-main-container {
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    justify-content: space-around;
+}
+
+.contact-main-container div a {
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    margin-bottom: 5px;
+}
+
+.contact-main-container div p {
+    margin: 0;
+}
+
+.contact {
+    display: flex;
+    padding: 100px 0;
+}
+.contact img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+.contact div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+} */
+
+.profile-main-container {
+    padding: 70px 40px;
+    background-color: var(--bg-color);
+    margin-bottom: 50px;
+}
+
+.profile-main-container .profile-container {
+    display: flex;
+}
+
+.profile-main-container img {
+    width: 320px;
+    margin-right: 30px;
+}
+
+.profile-main-container .profile-container .profile-info-container h1 {
+    font-size: 1.8rem;
+}
+
+.profile-main-proyects {
+    padding: 0 50px 40px;
+}
+
+.profile-main-proyects h2 {
+    border-bottom: 1px solid var(--uline-color);
+    padding-bottom: 35px;
+    text-align: center;
+}
+
+.proyects-main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.proyect-container {
+    padding: 0 5px;
 }
